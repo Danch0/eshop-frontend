@@ -11,6 +11,7 @@ const sharedStyles = css`
 `;
 
 const StyledForm = styled.form`
+  text-align: center;
   width: 100%;
   max-width: 700px;
   padding: 40px;

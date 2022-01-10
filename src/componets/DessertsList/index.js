@@ -6,18 +6,17 @@ function DessertsList(props){
     let {shouldFetch, setShouldFetch} = props
     let [list, setList] = useState([]);
     useEffect(() => {
-        if(shouldFetch == true){
+        if(shouldFetch === true){
             axios.get("http://localhost:3030/api/desserts").then(({data}) => {
                 setList(data);
                 console.log(data);
                 setShouldFetch(false);
             });
         }
-    }, [shouldFetch])
+    }, [shouldFetch, setShouldFetch])
 
     return(
         <DessertsListStyle>
-            <h1>Hola</h1>
             <div>
                 {list.map((item) => {
                     return (

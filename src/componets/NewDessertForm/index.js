@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react";
+import { StyledForm, StyledInput, StyledButton } from "./style";
 
 function NewDessert(props){
     let [newName, setNewName] = useState("");
@@ -22,12 +23,15 @@ function NewDessert(props){
     }
 
     return(
-        <form onSubmit={createNewDesssert}>
+        <>
+        <StyledForm onSubmit={createNewDesssert}>
+            <h2>Nuevo Postre</h2>
             <div>
-                <input onChange={handleNameChange} placeholder="Put the new name." name="name"></input>
+                <StyledInput onChange={handleNameChange} placeholder="Put the new name." name="name"></StyledInput>
             </div>
-            <button>Send</button>
-        </form>
+            <StyledButton>Guardar</StyledButton>
+        </StyledForm>
+        </>
     );
 }
 

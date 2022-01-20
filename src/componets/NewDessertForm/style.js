@@ -12,13 +12,13 @@ const sharedStyles = css`
 
 const StyledForm = styled.form`
   text-align: center;
-  width: 100%;
-  max-width: 700px;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  order: 1;
+  flex: 3;
 `;
 
 const StyledInput = styled.input`

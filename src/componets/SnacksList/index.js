@@ -1,24 +1,18 @@
-import {useEffect, useState} from "react"
-import axios from "axios"
+import {useEffect} from "react"
+import {useDispatch, useSelector} from "react-redux";
 import SnacksListStyle from "./style";
+import {fetchSnacksList} from "../../store/actions";
 
 function SnacksList(props){
-    let {shouldFetch, setShouldFetch} = props
-    let [list, setList] = useState([]);
-    useEffect(() => {
-        if(shouldFetch === true){
-            axios.get("http://localhost:3030/api/snacks").then(({data}) => {
-                setList(data);
-                console.log(data);
-                setShouldFetch(false);
-            });
-        }
-    }, [shouldFetch, setShouldFetch])
+    let {snackList} = useSelector((state) => state.snacks);
+    const dispatch = useDispatch();
+
+    useEffect(() => { dispatch(fetchSnacksList()) }, [])
 
     return(
         <SnacksListStyle>
             <div>
-                {list.map((item) => {
+                {snackList.map((item) => {
                     return (
                         <div key={`snacks_${item.id}`}>
                             <label>Name: </label>

@@ -1,24 +1,18 @@
-import axios from "axios"
 import { useState } from "react";
 import { StyledForm, StyledInput, StyledButton } from "./style";
+import { useDispatch } from "react-redux";
+import { postDessert } from "../../store/actions";
 
 function NewDessert(props){
     let [newName, setNewName] = useState("");
+    const dispatch = useDispatch();
 
     function createNewDesssert(event){
         event.preventDefault();
-        axios({
-            url: "http://localhost:3030/api/desserts/new", 
-            method: "POST",
-            data: { name: newName}
-        }).then((response) => {
-            console.log(response);
-            props.setShouldFetch(true);
-        });
+        dispatch(postDessert(newName))
     }
     
     function handleNameChange(event){
-        //console.log(event.target.value);
         setNewName(event.target.value);
     }
 

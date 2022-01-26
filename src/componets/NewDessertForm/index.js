@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StyledForm, StyledInput, StyledButton } from "./style";
 import { useDispatch } from "react-redux";
 import { postDessert } from "../../store/actions";
+import ImagenUploader from "../ImagenUploader";
 
 function NewDessert(props){
     let [newName, setNewName] = useState("");
@@ -21,6 +22,7 @@ function NewDessert(props){
         <StyledForm onSubmit={createNewDesssert}>
             <h2>Nuevo Postre</h2>
             <div>
+                <ImagenUploader></ImagenUploader>
                 <StyledInput onChange={handleNameChange} placeholder="Put the new name." name="name"></StyledInput>
             </div>
             <StyledButton>Guardar</StyledButton>

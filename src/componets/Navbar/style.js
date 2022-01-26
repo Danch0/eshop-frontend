@@ -7,6 +7,8 @@ const NavBarrStyled = styled.nav`
     background: rgb(51, 51, 51);
     //line-height: 100px;
     align-items: center;
+    position: sticky;
+    top: 0;
     a{
         color: white;
         text-decoration: none;

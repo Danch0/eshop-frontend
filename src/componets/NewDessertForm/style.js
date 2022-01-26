@@ -18,7 +18,8 @@ const StyledForm = styled.form`
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   order: 1;
-  flex: 3;
+  max-width: 720px;
+  width: 100%;
 `;
 
 const StyledInput = styled.input`

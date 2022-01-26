@@ -1,3 +1,4 @@
+import React from "react";
 import AboutDiv from "./Style";
 
 function About(props){

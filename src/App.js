@@ -8,6 +8,7 @@ import Dessets from "./views/Desserts";
 import Snack from "./views/Snacks";
 import CounterForm from "./componets/CounterForm";
 import NavBarr from "./componets/Navbar";
+import OrderContainer from "./componets/Order";
 import Footer from "./componets/Footer";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="desserts" element={ <Dessets/> }/>
           <Route path="snacks" element={ <Snack/> }/>
           <Route path="about" element={ <About/> }/>
+          <Route path="order" element={<OrderContainer />} />
           <Route path="counter" element={<CounterForm />} />
         </Routes>
         <Footer></Footer>

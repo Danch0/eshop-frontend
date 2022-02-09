@@ -7,6 +7,7 @@ function NavBarr(){
             <Link to="desserts">Desserts</Link>
             <Link to="snacks">Snacks</Link>
             <Link to="about">About Us</Link>
+            <Link to="order">Pedido</Link>
             <Link to="counter">Counter example</Link>
         </NavBarrStyled>
     );
